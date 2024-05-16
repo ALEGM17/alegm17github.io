@@ -1,0 +1,48 @@
+html {
+    background-color: hwb(150 25% 30%);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 125%;
+    text-align: justify;
+    hyphens: auto;
+}
+
+p.texto::first-letter {
+    float: left;
+    color: hwb(140 0% 60%);
+    font-size: 80px;
+    font-style: normal;
+    line-height: 48px; 
+  }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:left ;
+}
+
+img{
+    border: 3px solid green;
+}
+
+article {
+    display: flex;
+    flex-direction:row;
+    width: 500px;
+    margin: 20px;
+    margin-right: 120px;
+    border: black 3px solid;
+    background-color: hwb(150 50% 30%);
+}
+
+h2 {
+    margin: 5px;
+    padding: 5px;
+    border-right: black 1px solid;
+}
+
+div {
+    margin-left:  5px;
+    margin-right: 5px;
+    width: 300px;
+}
+
