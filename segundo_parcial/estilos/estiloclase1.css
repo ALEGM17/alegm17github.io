@@ -1,0 +1,40 @@
+body{
+    background-color:lightgray;
+    text-align: justify;
+}
+h1{
+    text-align: center;
+}
+p{
+    margin-top: 25px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.titulos{
+    font-size: 24px;
+    color: white;
+    background-color: gray;
+    text-align: left;
+    margin-top: 25px;
+    margin-left: 125px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 10px;
+    width: 1600px;
+    
+
+}
+img{
+    margin-top: 20px;
+    margin-left: 220px;
+    float: left;
+    height: 120px;
+    width: 80px;
+}
+.hlrojo{
+    color: red;
+}
+.hlblanco{
+    background-color: white;
+}

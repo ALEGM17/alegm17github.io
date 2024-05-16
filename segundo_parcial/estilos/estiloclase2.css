@@ -1,0 +1,25 @@
+h1{
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+}
+body{
+    background-color: #1c7744;
+}
+.blanco{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+
+}
+.bisque{
+    color:bisque ;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
+}
+.dorado{
+    color: goldenrod;
+    letter-spacing: 0.1em;
+    font-size: 18px;
+}
+.rojo{
+    color:darkred;
+    font-family: 'Comic Sans';
+    text-shadow: 1px 1px 1px black;
+}

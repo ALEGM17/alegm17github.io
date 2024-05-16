@@ -1,0 +1,50 @@
+@import url(https://fonts.googleapis.com/css?family=Cabin+Sketch);
+@import url(https://fonts.googleapis.com/css?family=Gabriela);
+@import url(https://fonts.googleapis.com/css?family=Nanum+Gothic);
+
+h1{
+  font-family: Verdana;
+  color:darkred;
+}
+h2{
+  font-family: 'Times New Roman';
+  color: crimson;
+}
+p{
+  font-family:'Trebuchet MS';
+  color: blanchedalmond;
+  font-size: 12px;
+}
+img{
+  width: 100px;
+  height: 100px;
+}
+body{
+  background-image: url(imagenes/imagennatafondo.jfif);
+  background-repeat: no-repeat;
+  background-size: 400px 400px;
+  background-position: center;
+  text-align: center;
+  background-color: black;
+  color: blanchedalmond;
+}
+
+div {
+  padding: 2px 10px;
+}
+div.estrofa{
+  border: hwb(0 12% 11%) 2px solid;
+  border-radius: 0 20px 20px 20px;
+  margin: 10px 50px;
+  background-color: hwb(0 12% 11%);
+}
+div.coro{
+  border: hwb(0 8% 39%) 2px solid;
+  border-radius: 0 20px 20px 20px;
+  margin: 10px 50px;
+  background-color: hwb(0 8% 39%);
+}
+
+div p {
+  margin: 2px;
+}

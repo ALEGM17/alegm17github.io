@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Alejandro Garcia Morales</title>
+    <style>
+        body{
+            background-color: rgb(253, 255, 244);
+        }
+        header {
+            background-color: #2b4da2;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+                }
+        h1{
+            text-align: center;
+            color: white;
+        }
+        p{
+            text-align: center;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+        p.parciales{
+            text-align: center;
+            font-size: 15px;
+            color: white;
+        }
+        div.centro{
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:row; 
+        }
+        .antes_boton{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction:row;
+            justify-content:center  ;
+        }
+        .boton{
+            justify-content: center;
+            height: 50px;
+            width: 100px; 
+            transition: width 0.5s;
+            background-color:rgb(7, 135, 255); 
+            border-radius: 10px;
+            margin: 10px;
+            margin-top: 0px;
+            text-align: center;
+            margin-bottom: 5px;
+            display: flex;
+            flex-direction:row;
+        }
+        .boton:hover {
+            width: 120px; 
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background-color:rgba(255, 249, 221, 0.767);
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Portafolio de evidencias</h1>
+    </header>
+    <p>Este es mi portafolio, que contiene las actividades de los dos parciales del semestre.</p>
+    <div class="antes_boton">
+    <div class="boton">
+            <a href="Parcial_1.html" target="iframe_a"><p class="parciales">Parcial 1</p></a>
+    </div>
+    <div class="boton">
+        <a href="Parcial_2.html" target="iframe_a"><p class="parciales">Parcial 2</p></a>
+    </div>
+</div>
+    <div class="centro">
+    <iframe src="" name="iframe_a" height="650px" width="80%" title="contenido">
+        
+    </iframe>
+    </div>
+    <footer><p>Alejandro García Morales | 183793 | 183793@upslp.edu.mx</p></footer>
+</body>
+</html>
