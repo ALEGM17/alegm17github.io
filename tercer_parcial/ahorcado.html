@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            let cont=0;
+            function imprimedibujo()
+            {
+                let palabraus= document.forms[0].palabra.value;
+                const canvas = document.getElementById("miCanvas");
+                const ctx = canvas.getContext("2d");
+                if((palabraus=="naranja"))
+                {
+                    alert("Has adivinado la palabra");
+                } else 
+                    if(cont<=6)
+                    {
+                        cont++;
+                    }
+                    else {alert("Los intentos se han terminado");}
+                //cabeza
+                if(cont==1)
+                {
+                ctx.beginPath(); 
+                ctx.arc(245,55,50,0,2*Math.PI);
+                ctx.stroke();
+                }
+                //cuerpo
+                if(cont==2)
+                {
+                ctx.beginPath(); 
+                ctx.moveTo(245,105);
+                ctx.lineTo(245,305);
+                ctx.stroke();
+                }
+                //brazo izquierdo
+                if(cont==3)
+                {
+                ctx.beginPath(); 
+                ctx.moveTo(245,105);
+                ctx.lineTo(180,215);
+                ctx.stroke();
+                }
+                //brazo derecho
+                if(cont==4)
+                {
+                ctx.beginPath(); 
+                ctx.moveTo(245,105);
+                ctx.lineTo(310,215);
+                ctx.stroke();
+                }
+                //pie izquierdo
+                if(cont==5){
+                ctx.beginPath(); 
+                ctx.moveTo(245,305);
+                ctx.lineTo(180,410);
+                ctx.stroke();
+                }
+                //pie derecho
+                if(cont==6)
+                {
+                ctx.beginPath(); 
+                ctx.moveTo(245,305);
+                ctx.lineTo(310,410);
+                ctx.stroke();
+               
+                }  
+            }
+            function Borradibujo()
+                {
+                    let canvas = document.getElementById("miCanvas");
+                    let ctx = canvas.getContext("2d");
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    cont=0;
+                }
+        </script>
+    </head>
+<body>
+<h1>Ahorcado</h1>
+<form id="myform">
+<p>Ingresa la palabra <input id="palabra" name="palabra" type="text"/></p>
+</form>
+<p><button onclick="imprimedibujo()">Jugar</button></p>
+<p><button onclick="Borradibujo()">Reset</button></p>
+<canvas id="miCanvas" width="500" height="500" style= "border:1px solid">
+</canvas>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Bienvenida del usuario</title>
+  <script type = "text/javascript">
+  function convertir() {
+      var gradosus= parseInt(document.forms[0].gradosc.value);
+      var opcion1= parseInt(document.forms[0].opcion.value);
+      document.write("°C: ",gradosus);
+      var respuesta=0;
+    if(opcion1==1){
+        respuesta=gradosus+273;
+        document.write("<p></p>");
+        document.write("Tú opción fue KELVIN");
+        document.write("<p></p>");
+        document.write("Equivale a: ",respuesta);
+        document.write("°K");
+   }
+   if(opcion1==2){
+        respuesta= ((5/9)*gradosus)+32;
+        document.write("<p></p>");
+        document.write("Tú opción fue FARENHEIT");
+        document.write("<p></p>");
+        document.write("Equivale a: ",respuesta);
+        document.write(" °F");
+   }
+    return true;
+  }
+  </script>
+</head>
+<body>
+  <h1>Convertidor de °C:</h1>
+<form id="myform" onsubmit="return convertir();">
+<p>°C: <input id="gradosc" name="gradosc" type="text"/></p>
+<p>Convertir a: 
+    <select name="opcion" name="opcion">
+        <option value="1">KELVIN</option>
+        <option value="2">FARENHEIT</option>
+    </select>
+</p>
+<p><input type="submit"/></p>
+</form>
+</body>
+</html>
