@@ -1,7 +1,7 @@
 <html>
 <head>
 	<title>Alejandro García Morales</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
 	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
 	<script type="text/javascript" src="jspdf.js"></script>
@@ -24,12 +24,14 @@
 	function datos(){
 
 	$(document).ready(function (){
+		var salida="";
     let codi = ["A","B","C","D","E","F","G","H","I","J","K",
     "L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
     var doc = new jsPDF(); //constructor
     doc.setFontSize(40); //tamaño de letra
-	
-	doc.text(40, 30,codi[0]);
+	salida+=codi[0];
+	salida+=codi[1];
+	doc.text(40, 30,salida);
     var string = doc.output('datauristring');
     $('iframe').attr('src', string);
 	});
