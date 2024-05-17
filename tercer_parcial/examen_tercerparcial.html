@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>Alejandro García Morales</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>	
+	<script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <h1>Versión C del examen del tercer parcial</h1>
+<iframe frameborder="0" width="500" height="400"></iframe>
+<script>
+	function datos(){
+
+	$(document).ready(function (){
+    let codi = ["A","B","C","D","E","F","G","H","I","J","K",
+    "L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    var doc = new jsPDF(); //constructor
+    doc.setFontSize(40); //tamaño de letra
+	
+	doc.text(40, 30,codi[0]);
+    var string = doc.output('datauristring');
+    $('iframe').attr('src', string);
+	});
+	return false;
+	}
+</script>
+<form id="myform" onsubmit="return datos();">
+	<p>Ingresa números del 0 al 25 </p>
+	<p>Número 1: <input id="num1" name="num1" 	type="number" min="0" max="25"/></p>	
+	<p>Número 2: <input id="num2" name="num2" 	type="number" min="0" max="25"/></p>	
+	<p>Número 3: <input id="num3" name="num3" 	type="number" min="0" max="25"/></p>	
+	<p>Número 4: <input id="num4" name="num4" 	type="number" min="0" max="25"/></p>	
+	<p>Número 5: <input id="num5" name="num5" 	type="number" min="0" max="25"/></p>	
+	<p>Número 6: <input id="num6" name="num6" 	type="number" min="0" max="25"/></p>	
+	<p>Número 7: <input id="num7" name="num7" 	type="number" min="0" max="25"/></p>	
+	<p>Número 8: <input id="num8" name="num8" 	type="number" min="0" max="25"/></p>	
+	<p>Número 9: <input id="num9" name="num9" 	type="number" min="0" max="25"/></p>	
+	<p>Número 10: <input id="num10" name="num10" 	type="number" min="0" max="25"/></p>	
+	<br><input type="submit" class="btn btn-primary" ></p>
+</form>	
+</body>
+</html>
