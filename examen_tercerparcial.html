@@ -25,14 +25,15 @@
                 }
             }
 
-            $(document).ready(function() {
+         
                 var doc = new jsPDF();
                 doc.setFontSize(12);
                 doc.text(40, 20, salida);
                 var string = doc.output('datauristring');
                 $('iframe').attr('src', string);
-            });
 
+
+            document.getElementById('output').innerText = 'El mensaje codificado es: ' + salida;
             return false;
             
         }
@@ -51,6 +52,11 @@
             display: flex;
             flex-wrap: wrap;
         }
+        #output {
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -59,38 +65,39 @@
     <form id="myform" onsubmit="return resultados();">
         <p>Ingresa números del 0 al 25 </p>
         <div class="todos">
-        <div class="boton"> 
-        <p>Número 1: <input id="num1" name="num1" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 2: <input id="num2" name="num2" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 3: <input id="num3" name="num3" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 4: <input id="num4" name="num4" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 5: <input id="num5" name="num5" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 6: <input id="num6" name="num6" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 7: <input id="num7" name="num7" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 8: <input id="num8" name="num8" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 9: <input id="num9" name="num9" type="number" min="0" max="25" /></p>
-        </div>
-        <div class="boton">
-        <p>Número 10: <input id="num10" name="num10" type="number" min="0" max="25" /></p>
-        </div>
-    </div>  
+            <div class="boton"> 
+            <p>Número 1: <input id="num1" name="num1" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 2: <input id="num2" name="num2" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 3: <input id="num3" name="num3" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 4: <input id="num4" name="num4" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 5: <input id="num5" name="num5" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 6: <input id="num6" name="num6" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 7: <input id="num7" name="num7" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 8: <input id="num8" name="num8" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 9: <input id="num9" name="num9" type="number" min="0" max="25" /></p>
+            </div>
+            <div class="boton">
+            <p>Número 10: <input id="num10" name="num10" type="number" min="0" max="25" /></p>
+            </div>
+        </div>  
         <br><input type="submit" class="btn btn-primary" />
     </form>
+    <div id="output"></div>
 </body>
 </html>
